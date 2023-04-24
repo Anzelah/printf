@@ -36,16 +36,13 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				break;
 				}
 			}
-			if (f_arr[j].my_printf == NULL)
-				if (format[i + 1] != '\0')
-				{
-					write_char(format[i]);
-					printed_chars++;
-				}
-				else 
-					return (-1);
-
+			if (f_arr[j].my_printf == NULL && format[i + 1] != '\0')
+			{
+				write_char(format[i]);
+				printed_chars++;
 			}
+			else 
+				return (-1);
 
 		}
 		else /* if char isnt % */
