@@ -15,9 +15,6 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 {
 	int i, j, result, printed_chars;
 
-	if (format == NULL)
-		return (-1);
-
 	printed_chars = 0;
 
 	for (i = 0; format[i] != '\0'; i++)
@@ -39,9 +36,10 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				break;
 				}
 			}
-			if (f_arr[j].my_printf == NULL)
+			if (f_arr[j].my_printf == NULL && format[i + 1] != '\0')
 			{
 				write_char(format[i]);
+				write_char(format[i + 1]);
 				printed_chars++;
 
 			}
