@@ -22,10 +22,10 @@ int _printf(const char *format, ...)
 		{NULL, NULL},
 	};
 
-	va_list (arg_list);
+	va_list(arg_list);
 
 	va_start(arg_list, format);
-	
+
 	if (format == NULL)
 	{
 		return (-1);
@@ -35,5 +35,5 @@ int _printf(const char *format, ...)
 
 	va_end(arg_list);
 
-	return(printed);
+	return (printed);
 }

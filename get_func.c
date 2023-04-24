@@ -5,10 +5,10 @@
 /**
  * get_func - select the necessary function
  * @format: point to inputted format string
- * @f_arr[]: list containing all possible functions
+ * @f_arr: list containing all possible functions
  * @arg_list: list containing all arguments
  *
- * Returns: pointer to corresponding function
+ * Return: the printed characters
  */
 
 int get_func(const char *format, print f_arr[], va_list arg_list)
@@ -26,7 +26,7 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				if (f_arr[j].my_printf[0] == format[i + 1])
 				{
 					result = f_arr[j].f(arg_list);
-					
+
 					if (result == -1)
 					{
 						return (-1);
@@ -42,7 +42,7 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				printed_chars++;
 
 			}
-			
+
 		}
 		else /* if char isnt % */
 		{

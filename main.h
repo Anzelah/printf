@@ -6,7 +6,7 @@
 #include <stdlib.h>
 
 /**
- * struct my_printf - data structures containing functions
+ * struct print - data structures containing functions
  *
  * @my_printf: contains format specifiers
  * @f: function associated
@@ -15,8 +15,10 @@
 typedef struct print
 {
 	char *my_printf;
-	int(*f)(va_list list);
+	int (*f)(va_list list);
+
 } print;
+
 
 /* functions */
 int write_char(char c);

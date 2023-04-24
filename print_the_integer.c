@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include "main.h"
 
 /**
@@ -31,10 +32,11 @@ int print_numbers(va_list args)
 		length++;
 		s /= 10;
 	}
-	return(length);
+	return (length);
 }
 
-/** print_unsigned_number - print only the positive numbers
+/**
+ * print_unsigned_numbers - print only the positive numbers
  * @args: list or arguments
  *
  * Return: printed numbers
@@ -51,5 +53,5 @@ int print_unsigned_numbers(va_list args)
 		length++;
 		num /= 10;
 	}
-	return(length);
+	return (length);
 }

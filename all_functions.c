@@ -51,7 +51,7 @@ int print_integer(va_list list)
 
 	length = print_numbers(list);
 
-	return(length);
+	return (length);
 }
 
 /**
@@ -87,6 +87,6 @@ int print_unsigned_integer(va_list list)
 int print_percentage(__attribute__((unused))va_list list)
 {
 	write_char('%' + 0);
-	
+
 	return (2);
 }
