@@ -1,57 +1,55 @@
 #include "main.h"
 /**
  * print_numbers - prints a number
- * @format: list of arguments
+ * @ap: argument list
  *
  * Return: printed numbers
  */
-int print_numbers(const char *format, ...)
-{
-	va_list args;
-	int value = 0, dev = 1, count, digit;
 
-	va_start(args, format);
-	while (*format != '\0')
+int print_numbers(va_list ap)
+{
+	int s;
+	int num, length;
+
+	num = va_arg(ap, int);
+
+	if (num < 0) /* checks if interger is negative */
 	{
-		if (*format == '%')
-		{
-			format++;
-			if (*format == 'd' || *format == 'i')
-			{
-				count = va_arg(args, int);
-		if (count < 0)
-		{
-			write_char('-');
-			value++;
-			count = -count;
-		}
-		while ((count / dev) > 9)
-		{
-			dev *= 10;
-		}
-		while (dev > 0)
-		{
-		digit = (count / dev);
-		write_char('0' + digit);
-		value++;
-		count %= dev;
-		dev /= 10;
-		}
-			}
-			else
-			{
-		write_char('%');
-		write_char(*format);
-		value += 2;
-			}
-		}
-		else
-		{
-		write_char(*format);
-		value++;
-		}
-		format++;
+		write_char('-');
+		s = -num;
 	}
-	va_end(args);
-	return (value);
+	else
+	{
+		s = num;
+	}
+	length = 0;
+
+	while (s > 0)
+	{
+		write_char('0' + (s % 10));
+		length++;
+		s /= 10;
+	}
+	return (length);
+}
+
+/**
+ * print_unsigned_numbers - print only the positive numbers
+ * @ap: list or arguments
+ *
+ * Return: printed numbers
+ */
+
+int print_unsigned_numbers(va_list ap)
+{
+	unsigned int num = va_arg(ap, int);
+	int length = 0;
+
+	if (num > 0)
+	{
+		write_char('0' + (num % 10));
+		length++;
+		num /= 10;
+	}
+	return (length);
 }
