@@ -1,11 +1,26 @@
-Write your own printf function
-0. Returns: the number of characters printed (excluding the null byte used to end output to strings)
-write output to stdout, the standard output stream
-format is a character string. The format string is composed of zero or more directives. See man 3 printf for more detail. You need to handle the following conversion specifiers:
-c
-s
-%
-1. Handle the following conversion specifiers:
+<html>
+<body>
+<h1>
+Printf impelementation.
+</h1>
+ <hr>
+<p>
+<table border="1">
+<tr><td>&#128204;</td><td><a href=" ">main.h</a></td> <td>The file contains all prototypes of the functions</td></tr>
+<tr><td>&#128204;</td><td><a href=" ">_printf.c</a></td><td>Handles %s,%c and % conversion specifiers.</td></tr>
+<tr><td>&#128204;</td><td><a href=""></a></    td> <td></td></tr>
+<tr><td>&#128204;</td><td><a href=" "></a></    td> <td></td></tr>
+<tr><td>&#128204;</td><td><a href=" "></a></    td> <td></td></tr>
+<tr><td>&#128204;</td><td><a href=" "></a></    td> <td></td></tr>
+<tr><td>&#128204;</td><td><a href=" "></a></    td> <td></td></tr>
+<tr><td>&#128204;</td><td><a href=" "></a></    td> <td></td></tr>
+</table>
+</p>
+<hr>
+<footer>
+<p><b>Authored by:</b><em>Anzellah and Kystar012</em></p>
+<hr>
+</footer>
+</body>
+</html> 
 
-d
-i
