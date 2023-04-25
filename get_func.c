@@ -30,6 +30,7 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 						return (-1);
 					}
 				printed_chars += result;
+				i++;
 				break;
 				}
 			}
@@ -38,7 +39,6 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				write_char(format[i]);
 				printed_chars++;
 			}
-			i++;
 		}
 		else /* char isn't % */
 		{
