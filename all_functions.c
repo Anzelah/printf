@@ -43,11 +43,12 @@ int print_string(va_list list)
  * Return: the numbers printed
  */
 
-int print_integer(va_list list)
+int print_integer(const char *format, ...)
 {
 	int length;
 
-	length = print_numbers(list);
+	length = print_numbers(format);
+
 
 	return (length);
 }
@@ -59,7 +60,7 @@ int print_integer(va_list list)
  * Return: printed integers
  */
 
-int print_unsigned_integer(va_list list)
+/*int print_unsigned_integer(va_list list)
 {
 	int length, num;
 
@@ -73,7 +74,7 @@ int print_unsigned_integer(va_list list)
 	}
 	else
 		return (length);
-}
+}*/
 
 /**
  * print_percentage - prints the format handler
