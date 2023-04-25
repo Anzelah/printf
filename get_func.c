@@ -34,11 +34,14 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				break;
 				}
 			}
-			if (f_arr[j].my_printf == NULL)
+			if (f_arr[j].my_printf == NULL && format[i + 1] != '\0')
 			{
 				write_char(format[i]);
-				printed_chars++;
+				write_char(format[i + 1]);
+				printed_chars += 2;
 			}
+			else
+				return (-1);
 		}
 		else /* char isn't % */
 		{
