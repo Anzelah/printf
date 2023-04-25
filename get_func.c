@@ -41,16 +41,14 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				{
 					write_char(format[i]);
 					write_char(format[i + 1]);
-					printed_chars++;
+					printed_chars += 2;
 				}
 				else
 					return (-1);
-
 			}
 			i++;
-
 		}
-		else /* if char isnt % */
+		else /* char isn't % */
 		{
 			write_char(format[i]);
 			printed_chars++;
