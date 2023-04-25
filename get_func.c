@@ -17,9 +17,6 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 
 	printed_chars = 0;
 
-	if (format == NULL)
-		return (-1);
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] == '%')
@@ -38,16 +35,11 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				break;
 				}
 			}
-			if (f_arr[j].my_printf == NULL)
+			if (f_arr[j].my_printf == NULL && format[i + 1] != '\0')
 			{
-				if (format[i + 1] != '\0')
-				{
-					write_char(format[i]);
-					write_char(format[i + 1]);
-					printed_chars += 2;
-				}
-				else
-					return (-1);
+				write_char(format[i]);
+				write_char(format[i + 1]);
+				printed_chars += 2;
 			}
 			i++;
 		}
