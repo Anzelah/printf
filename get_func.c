@@ -35,18 +35,17 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				break;
 				}
 			}
-			if (f_arr[j].my_printf == NULL || format[i + 1] == '\0')
+			if (f_arr[j].my_printf == NULL)
 			{
-				write_char(format[i + 1]);
-				printed_chars++;
+				if (format[i + 1] != '\0')
 				{
-					if (format[i + 1] != '\0')
-					{
-						write_char(format[i + 1]);
-					}
-					else
-						return (-1);
+					write_char(format[i]);
+					write_char(format[i + 1]);
+					printed_chars++;
 				}
+				else
+					return (-1);
+
 			}
 			i++;
 
