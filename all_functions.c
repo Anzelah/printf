@@ -29,6 +29,9 @@ int print_string(va_list list)
 
 	str = va_arg(list, char *);
 
+	if (str == NULL)
+		return (-1);
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
 		write_char(str[i]);
