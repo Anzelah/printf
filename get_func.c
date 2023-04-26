@@ -39,7 +39,7 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 				write_char(format[i]);
 				printed_chars++;
 			}
-			
+
 		}
 		else /* char isn't % */
 		{
