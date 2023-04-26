@@ -14,6 +14,10 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 	int i, j, result, printed_chars;
 
 	printed_chars = 0;
+	i = 0;
+
+	if (format[i] == '\0')
+		return (-1);
 
 	for (i = 0; format[i] != '\0'; i++)
 	{
@@ -48,6 +52,4 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 		}
 	}
 	return (printed_chars);
-	if (format[i] == '\0')
-		return (-1);
 }
