@@ -35,7 +35,7 @@ int print_numbers(va_list ap)
 
 /**
  * print_unsigned_numbers - print only the positive numbers
- * @ap: list or arguments
+ * @s: first argument
  *
  * Return: printed numbers
  */

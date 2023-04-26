@@ -70,7 +70,7 @@ int print_unsigned_integer(va_list list)
 	num = va_arg(list, int);
 
 	length = print_unsigned_numbers(num);
-	
+
 	return (length);
 }
 
