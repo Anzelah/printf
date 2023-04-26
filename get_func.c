@@ -47,5 +47,11 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 			printed_chars++;
 		}
 	}
+
+	if (format[i - 1] != '%')
+	{
+		printed_chars--;
+	}
+
 	return (printed_chars);
 }
