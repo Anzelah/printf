@@ -24,7 +24,7 @@ typedef struct print
 int write_char(char c);
 int _printf(const char *format, ...);
 int print_numbers(va_list ap);
-int print_unsigned_numbers(va_list ap);
+int print_unsigned_numbers(unsigned int s);
 int print_char(va_list list);
 int print_string(va_list list);
 int get_func(const char *format, print f_arr[], va_list arg_list);

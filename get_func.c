@@ -48,10 +48,5 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 		}
 	}
 
-	if (format[i] == '\0')
-	{
-		printed_chars--;
-	}
-
 	return (printed_chars);
 }

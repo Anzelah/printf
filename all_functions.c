@@ -67,16 +67,11 @@ int print_unsigned_integer(va_list list)
 {
 	int length, num;
 
-	num = 0;
+	num = va_arg(list, int);
 
-	length = print_unsigned_numbers(list);
-
-	if (num < 0)
-	{
-		return (-1);
-	}
-	else
-		return (length);
+	length = print_unsigned_numbers(num);
+	
+	return (length);
 }
 
 /**

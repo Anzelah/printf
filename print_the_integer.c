@@ -40,16 +40,15 @@ int print_numbers(va_list ap)
  * Return: printed numbers
  */
 
-int print_unsigned_numbers(va_list ap)
+int print_unsigned_numbers(unsigned int s)
 {
-	unsigned int num = va_arg(ap, int);
 	int length = 0;
 
-	if (num > 0)
+	if (s >= 10)
 	{
-		write_char('0' + (num % 10));
-		length++;
-		num /= 10;
+		length += print_unsigned_numbers(s / 10);
 	}
+	length += write_char(s % 10 + '0');
+
 	return (length);
 }
