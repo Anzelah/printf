@@ -48,4 +48,6 @@ int get_func(const char *format, print f_arr[], va_list arg_list)
 		}
 	}
 	return (printed_chars);
+	if (format[i] == '\0')
+		return (-1);
 }
